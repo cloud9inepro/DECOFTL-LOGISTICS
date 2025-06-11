@@ -36,12 +36,13 @@ const Home = () => {
           <button className='main-btn' type="submit">Track</button>
         </form>
         <h2 className='main-h2'>Available Services</h2>
-      </div>
-      <div className='service'>
+        <div className='service'>
         <div className='service-card1'><p>Service 1</p></div>
         <div className='service-card1'><p>Service 2</p></div>
         <div className='service-card1'><p>Service 3</p></div>
       </div>
+      </div>
+      
     
     </>
     );
