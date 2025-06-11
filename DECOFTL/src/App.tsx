@@ -1,43 +1,88 @@
-import { useState } from 'react'
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import './App.css'
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+import Login from './pages/Login';
+import Register from './pages/Register';
+
+const pageVariants = {
+  initial: { opacity: 0, y: 30 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -30 },
+};
 
 function App() {
 
-[data, setData] = useState({
-  
-})
   return (
     <>
       <Header />
-      <main>
-        <h1>Track Your Package</h1>
-        <p>Enter your tracking number below to get the latest updates on your package.</p>
-        <form>
-          <input type="text" placeholder="Tracking Number" />
-          <button type="submit">Track</button>
-        </form>
 
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route
+            path="/"
+            element={
+              <motion.div
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                variants={pageVariants}
+                transition={{ duration: 0.4 }}
+              >
+                <Home />
+              </motion.div>
+            }
+          />
+          <Route
+            path="/Contact"
+            element={
+              <motion.div
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                variants={pageVariants}
+                transition={{ duration: 0.4 }}
+              >
+                <Contact />
+              </motion.div>
+            }
+          />
+          <Route
+            path="/Login"
+            element={
+              <motion.div
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                variants={pageVariants}
+                transition={{ duration: 0.4 }}
+              >
+                <Login />
+              </motion.div>
+            }
+          />
+          <Route
+            path="/Register"
+            element={
+              <motion.div
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                variants={pageVariants}
+                transition={{ duration: 0.4 }}
+              >
+                <Register />
+              </motion.div>
+            }
+          />
+        </Routes>
+      </AnimatePresence>
 
-
-        <h2>Available Services</h2>
-    <div className='service'>
-      <div className='service-card1'>
-        <p>Service 1</p>
-      </div>
-      <div className='service-card1'>
-        <p>Service 1</p>
-      </div>
-      <div className='service-card1'>
-        <p>Service 1</p>
-      </div>
-    </div>
-      </main>
-
-    <Footer />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
