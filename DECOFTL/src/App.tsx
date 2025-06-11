@@ -5,7 +5,9 @@ import './App.css'
 
 function App() {
 
-
+[data, setData] = useState({
+  
+})
   return (
     <>
       <Header />

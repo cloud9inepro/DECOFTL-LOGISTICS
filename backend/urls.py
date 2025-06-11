@@ -17,11 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from decoftl_app.api.views import AdminViewSet, RiderViewSet
+from decoftl_app.api.views import AdminViewSet, RiderViewSet, TrackerViewSet
 # Create a router and register our viewsets with it.
 router = DefaultRouter()
 router.register(r'admins', AdminViewSet, basename='admin')
 router.register(r'riders', RiderViewSet, basename='rider')
+router.register(r'tracker', TrackerViewSet, basename='tracker')
 # The API URLs are now determined automatically by the router.
 urlpatterns = [
     path('admin/', admin.site.urls),

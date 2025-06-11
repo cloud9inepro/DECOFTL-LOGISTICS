@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer, SerializerMethodField
-from ..models import Admin, Rider
+from ..models import Admin, Rider, Tracker
 
 class AdminSerializer(ModelSerializer):
     class Meta:
@@ -25,3 +25,8 @@ class RiderSerializer(ModelSerializer):
 
     def get_age(self, obj):
         return obj.age
+    
+class TrackerSerializer(ModelSerializer):
+    class Meta:
+        model = Tracker
+        fields = '__all__' 

@@ -3,8 +3,8 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.response import Response
 from rest_framework.decorators import action
-from ..models import Admin, Rider
-from .serializers import AdminSerializer, RiderSerializer
+from ..models import Admin, Rider, Tracker
+from .serializers import AdminSerializer, RiderSerializer, TrackerSerializer
 
 
 class AdminViewSet(ModelViewSet):
@@ -26,7 +26,18 @@ class RiderViewSet(ModelViewSet):
     authentication_classes = [TokenAuthentication]
     
     @action(detail=False, methods=['get'])  
-    def list_riders(self, request):
+    def list_rider(self, request):
         riders = self.get_queryset()
         serializer = self.get_serializer(riders, many=True)
         return Response(serializer.data)
+  
+class TrackerViewSet(ModelViewSet):
+    queryset = Tracker.objects.all()
+    serializer_class = TrackerSerializer
+    
+    @action(detail=False, methods=['get'])  
+    def list_Tracker(self, request):
+        tracker = self.get_queryset()
+        serializer = self.get_serializer(tracker, many=True)
+        return Response(serializer.data)
+    
