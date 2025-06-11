@@ -5,6 +5,10 @@ import './index.css'
 import App from './App.tsx'
 import Contact from './pages/Contact';
 
+
+
+
+
 createRoot(document.getElementById('root')!).render(
    <StrictMode>
     <Router>
