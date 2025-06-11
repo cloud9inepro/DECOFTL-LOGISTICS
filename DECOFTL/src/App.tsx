@@ -14,6 +14,7 @@ const pageVariants = {
 };
 
 function App() {
+  const location = useLocation();
 
   return (
     <>
