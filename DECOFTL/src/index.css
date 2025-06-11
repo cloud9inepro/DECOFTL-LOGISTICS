@@ -74,7 +74,7 @@ nav ul li a:hover {
 .main{
   text-align: center;
   margin-top: 4rem;
-  height: 70vh;
+  height: 80vh;
 }
 input{
   width: 100%;
@@ -288,20 +288,16 @@ textarea:focus {
 
 
 
-
 footer {
-  
   background-color: #282c34;
   color: white;
   text-align: center;
-   z-index: 1000;
-    margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
-  width: 100vw;
-   position: fixed;
-  left: 0;
-  bottom: 0;
+  margin-bottom: 0; /* or 'fixed' or 'sticky' depending on your layout */
+  width: 100%;
+  padding: 1rem 0;
+  z-index: 1000;
 }
+
 footer ul {
   display: flex;
   flex-direction: row;
