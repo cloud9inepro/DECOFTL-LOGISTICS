@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   return (
@@ -13,7 +14,9 @@ const Login = () => {
           <input type="password" placeholder="Password" required />
           <button className='main-btn' type="submit">Login</button>
         </form>
-        <p className='register-link'>Don't have an account? <a href="/register">Register here</a> </p>
+       <p className='login-link'>
+  Don't have an account? <Link to="/Register">Register here</Link>
+</p>
       </main>
     </>
   );

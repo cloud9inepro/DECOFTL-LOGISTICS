@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
   return (
@@ -13,7 +14,9 @@ const Register = () => {
             <input type="password" placeholder="Password" required />
             <button className='main-btn' type="submit">Register</button>
             </form>
-            <p className='login-link'>Already have an account? <a href="/login">Login here</a></p>
+           <p className='login-link'>
+  Already have an account? <Link to="/login">Login here</Link>
+</p>
         </main>
     </>
   );
