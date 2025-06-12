@@ -84,7 +84,7 @@ nav ul li a:hover {
 .main{
   text-align: center;
   margin-top: 4rem;
-  height: 80vh;
+  height: 88vh;
 }
 input{
   width: 100%;
@@ -149,9 +149,12 @@ input{
   justify-content: center;
   padding: 2rem;
   background-color: #f8f9fa;
-  height: 70vh;
+  height: 80vh;
 }
 
+.contact-tel {
+    animation:bounce 2s infinite;
+  }
 
 
 .contact-info {
