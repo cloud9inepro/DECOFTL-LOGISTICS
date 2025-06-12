@@ -32,7 +32,7 @@ const Home = () => {
         <h1>Track Your Package</h1>
         <p>Enter your tracking number below...</p>
         <form>
-          <input type="text" placeholder="Tracking Number" />
+          <input type="text" className="main-input" placeholder="Tracking Number" />
           <button className='main-btn' type="submit">Track</button>
         </form>
         <h2 className='main-h2'>Available Services</h2>

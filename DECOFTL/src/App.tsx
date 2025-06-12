@@ -81,6 +81,9 @@ function App() {
         </Routes>
       </AnimatePresence>
 
+        
+
+            
       <Footer />
     </>
   );

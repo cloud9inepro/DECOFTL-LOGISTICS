@@ -27,7 +27,7 @@ body {
 
 
 .logo{
-  height: 70px;
+  height: 5rem;
   width: auto;
   margin-left: 4rem;
 }
@@ -36,7 +36,11 @@ header{
   flex-direction: row;
   align-items: center;
   justify-content: space-between;;
-  background-color: #282c34;
+ /* background-color: #282c34; */
+ background-color: #0A192F; /* Deep Navy */
+color: #FFFFFF;
+
+
   color: white;
     z-index: 1000;
     margin-left: calc(-50vw + 50%);
@@ -44,6 +48,12 @@ header{
   width: 100vw;
   position: relative; 
   height: 80px;
+}
+.mobile-menu{
+  display: none;
+}
+.menu-toggle{
+  display: none;
 }
 nav ul{
   display: flex;
@@ -315,4 +325,165 @@ footer ul li a {
 }
 footer ul li a:hover {
   color: #282c34;
+}
+
+
+
+
+
+/** * ---------------------------------Media Queries for Responsive Design------------------------------------------------------------------------------------------*/
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    height: 60px;
+  }
+  .logo {
+    position: fixed;
+    left: 1rem;
+    margin: 0;
+    height: 3.5rem;
+  }
+
+  /* Optional - Reset */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Toggle button (hamburger) */
+.menu-toggle {
+  position: fixed;
+  display: block;
+  top: 0.3rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  z-index: 1100;
+  cursor: pointer;
+}
+
+/* Side menu */
+.mobile-menu {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 100vh;
+   background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+  padding-top: 4rem;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.mobile-menu ul li {
+  margin: 1.5rem;
+  text-align: center;
+}
+
+.mobile-menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  /*-----------main-----------*/
+  .main{
+    margin-top: 0;
+    height: auto;
+    padding: 2rem;
+    padding-top: 4rem;
+  }
+  .main-input {
+  width: 67%;
+}
+  .service {
+    flex-direction: column;
+
+  }
+  .service-card1 {
+    width: 100%;
+    max-width: 100%;
+  } 
+ 
+  /** * Contact Form*/
+.contact {
+    margin-top: 0;
+    padding:  1rem;
+    padding-top: 5rem;
+    height: 80dvh;
+    
+  }
+  .contact h1{
+    margin: 0;
+  }
+  .contact p{
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+  .contact-form {
+    width: 30%;
+    max-width: 400px;
+  }
+  .contact-info {
+    text-align: center;
+  }
+  .contact-tel {
+    animation:bounce 2s infinite;
+  }
+  .contact-form button {
+    width: 200%;
+  }
+  /** * Login Form*/
+
+.login {
+    margin-top: 0;
+    padding:  1rem;
+    padding-top: 5rem;
+    height: 70dvh;
+    
+  }
+  .login-form{
+    width: 30%;
+      max-width: 400px;
+  }
+
+/** Register Form*/
+.register {
+    margin-top: 0;
+    padding:  1rem;
+    padding-top: 5rem;
+    height: 70dvh;
+    
+  }
+  .register-form{
+    width: 30%;
+      max-width: 400px;
+  }
+
+
+
+
+  footer {
+  margin-bottom: 0;
+  
+}
 }

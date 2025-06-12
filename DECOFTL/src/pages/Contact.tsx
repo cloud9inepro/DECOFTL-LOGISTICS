@@ -13,7 +13,7 @@ const Contact =() => {
 
   {/* 📞 Direct Contact Info */}
   <div className="contact-info">
-    <p><strong>Call Us:</strong> <a href="tel:+2348012345678">+234 801 234 5678</a></p>
+    <p className='contact-tel'><strong>Call Us:</strong> <a  href="tel:+2348012345678">+234 801 234 5678</a></p>
     <p><strong>Email:</strong> <a href="mailto:support@yourcompany.com">support@yourcompany.com</a></p>
   </div>
 
