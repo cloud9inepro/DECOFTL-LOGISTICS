@@ -79,12 +79,12 @@ nav ul li a:hover {
   color: #54b3d6;
 }
 
-
+/*--------------------------------main-----------------------*/
 
 .main{
   text-align: center;
   margin-top: 4rem;
-  height: 88vh;
+  height: 40rem;
 }
 input{
   width: 100%;
@@ -149,7 +149,7 @@ input{
   justify-content: center;
   padding: 2rem;
   background-color: #f8f9fa;
-  height: 80vh;
+  height: 40rem;
 }
 
 .contact-tel {
@@ -265,39 +265,7 @@ textarea:focus {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*-----------------------------------------Footer--------------------------*/
 
 
 
