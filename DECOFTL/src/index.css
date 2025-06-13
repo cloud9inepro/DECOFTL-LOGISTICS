@@ -17,13 +17,11 @@ header{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;;
- /* background-color: #282c34; */
- background-color: #0A192F; /* Deep Navy */
-color: #FFFFFF;
+  justify-content: space-between;
+  background-color: #0A192F; 
   color: white;
-    z-index: 1000;
-    margin-left: calc(-50vw + 50%);
+  z-index: 1000;
+  margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
   width: 100vw;
   position: relative; 
@@ -88,7 +86,7 @@ nav ul li a:hover {
 .hero-section {
   position: relative;
   overflow: hidden;
-  min-height: 40rem;
+  height: 44rem;
   padding: 2rem;
   background-color: #f5f7fa;
 }
@@ -198,7 +196,35 @@ input{
   padding: 2rem;
   background-color: #f8f9fa;
   height: 40rem;
+  
 }
+
+
+.contact-backdrop {
+  position: absolute;
+  top: 0;
+  right: 3rem;
+  width: 60vh;
+  height: 100%;
+  
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  animation: float 3s ease-in-out infinite;
+ /* Ensure backdrop is behind the form */
+}
+
+.contact-backdrop img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+   /* Adjust for transparency */
+   /* Optional aesthetic */
+  
+}
+
 
 .contact-tel {
     animation:bounce 2s infinite;
@@ -208,6 +234,7 @@ input{
 .contact-info {
   margin-bottom: 1rem;
   font-size: 1rem;
+  z-index: 1;
 }
 
 .contact-info a {
@@ -224,6 +251,7 @@ input{
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  z-index: 1;
 }
 .contact-form textarea,
 .contact-form input {
@@ -251,9 +279,35 @@ textarea:focus {
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background-color: #f8f9fa;
+  
   height: 70vh;
 }
+
+.login-backdrop {
+  position: absolute;
+  top: 0;
+  left: 6rem;
+  width:60vh;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  /*animation: float 3s ease-in-out infinite;
+  z-index: -1; /* Ensure backdrop is behind the form */
+}
+
+.login-backdrop img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+   /* Adjust for transparency */
+   /* Optional aesthetic */
+  
+}
+
 .login-form{
    display: flex;
   flex-direction: column;
@@ -270,7 +324,7 @@ textarea:focus {
   font-size: 1rem;
 }
 
-/*-----------------register---------------*/
+/*-----------------------------------------------------register---------------*/
 .register {
   display: flex;
   flex-direction: column;
@@ -280,11 +334,38 @@ textarea:focus {
   background-color: #f8f9fa;
   height: 70vh;
 }
+
+
+.register-backdrop {
+  position: absolute;
+  top: 0;
+  right: 3rem;
+  width: 60vh;
+  height: 100%;
+  
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  /*animation: float 3s ease-in-out infinite;
+ /* Ensure backdrop is behind the form */
+}
+
+.register-backdrop img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+   /* Adjust for transparency */
+   /* Optional aesthetic */
+  
+}
 .register-form{
    display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  z-index: 1;
 }
 .register-form textarea,
 .register-form input {
@@ -325,6 +406,8 @@ footer {
   width: 100%;
   padding: 1rem 0;
   z-index: 1000;
+  position: fixed;
+  bottom: 0; /* Ensure footer is positioned correctly */
 }
 
 footer ul {
@@ -427,7 +510,7 @@ ul {
   /*-----------main-----------*/
   .hero-section{
     margin-top: 0;
-    height: auto;
+    height: 40rem;
     padding: 2rem;
     padding-top: 4rem;
   }
@@ -440,11 +523,13 @@ ul {
   .service {
     display: none;
     flex-direction: column;
+    z-index: 1000;
 
   }
   .service-card1 {
     width: 100%;
     max-width: 100%;
+    z-index: 1000;
   } 
   /* Mobile Carousel Wrapper */
 .service-carousel {
@@ -482,6 +567,9 @@ ul {
     padding-top: 5rem;
     height: 80dvh;
     
+  }
+  .contact-backdrop{
+    display: none;
   }
   .contact h1{
     margin: 0;
@@ -537,4 +625,41 @@ ul {
   margin-bottom: 0;
   
 }
+}
+
+
+/*---------------------------------tablet----------------------------*/
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contact{
+    height: 70vh;
+  }
+  .contact h1,p{
+    z-index: 1000;
+  }
+  .contact-backdrop {
+  position: absolute;
+  top: -9rem;
+  right: 2rem;
+  width: 25vh;
+  height: 100%;
+  display: none;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  animation: float 3s ease-in-out infinite;
+}
+.contact-backdrop img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  opacity: 0.8; 
+  filter: blur(1px); 
+  
+}
+
+
+
 }

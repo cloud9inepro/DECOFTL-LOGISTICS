@@ -2,11 +2,15 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
+import register from '../assets/register.svg';
 
 const Register = () => {
   return (
     <>
         <main className='register'>
+           <div className='register-backdrop'>
+          <img src={register} alt="background animation" />
+        </div>
             <h1>Register</h1>
             <form className='register-form'>
             <input type="text" placeholder="Full Name" required />
